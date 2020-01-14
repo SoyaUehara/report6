@@ -1,10 +1,8 @@
 package jp.ac.uryukyu.ie.e195752;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
-
 public class Read {
     ArrayList<String> List = new ArrayList<String>();
     public Read(String gimmick){
@@ -15,13 +13,8 @@ public class Read {
                 String str = scan.next();
                 this.List.add(str);
             }
-            System.out.println(List.size());
-
         }catch(FileNotFoundException e){
             System.out.println("ファイルがありません");
         }
-
     }
-
-
 }
