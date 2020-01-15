@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 /**
  * Searchクラス。
- * ArrayList<String> Gimmick_Data　//ギミックのリスト
+ * Gimmick_Data　//ギミックのリスト
  */
 public class Search {
     private ArrayList<String> Gimmick_Data = new ArrayList<>(){

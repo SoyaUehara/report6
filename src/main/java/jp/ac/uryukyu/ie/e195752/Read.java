@@ -6,13 +6,13 @@ import java.util.ArrayList;
 
 /**
  * Readクラス。ここでFileを読み込む。
- * ArrayList<String> List; //クエストの一覧
+ * List; //クエストの一覧
  */
 public class Read {
     private ArrayList<String> List = new ArrayList<>();
 
     /**
-     * ArrayList<String> Listのゲッターメソッド
+     * Listのゲッターメソッド
      * @return　対応したListを返す
      */
     public ArrayList getList(){
