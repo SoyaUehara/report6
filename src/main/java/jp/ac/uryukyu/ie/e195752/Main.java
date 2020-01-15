@@ -13,39 +13,33 @@ public class Main {
         Read Wp = new Read("Warp");
         Read Wind = new Read("wind");
         Scanner scan = new Scanner(System.in);
-        Search search = new Search();
         ArrayList<String> result = new ArrayList<String>();
         while (true){
+            Search search = new Search();
             System.out.println("ギミックを入力してください");
             String input = scan.nextLine();
             if (input.equals("Damage_wall")){
-                search.Searching(DW.List, result);
-                search.ResultPrint(result);
+                result = search.Searching(DW.List, result);
             }else if (input.equals("Block")){
-                search.Searching(Block.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Block.List,result);
             }else if (input.equals("Deceleration_Wall")){
-                search.Searching(Deceleration.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Deceleration.List,result);
             }else if (input.equals("Gravity_Barrier")){
-                search.Searching(GB.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(GB.List,result);
             }else if (input.equals("Magic_Circle")){
-                search.Searching(Magic.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Magic.List,result);
             }else if (input.equals("Mines")){
-                search.Searching(Mines.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Mines.List,result);
             }else if (input.equals("Warp")){
-                search.Searching(Wp.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Wp.List,result);
             }else if (input.equals("wind")){
-                search.Searching(Wind.List,result);
-                search.ResultPrint(result);
+                result = search.Searching(Wind.List,result);
             }else if (input.equals("end.")){
                 System.out.println("終了します");
                 break;
-            }else {
+            }else if (input.equals("リセット")){
+                result.clear();
+            } else {
                 System.out.println("もう一度、入力して下さい");
             }
         }

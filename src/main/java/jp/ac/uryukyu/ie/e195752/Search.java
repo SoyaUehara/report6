@@ -1,6 +1,4 @@
 package jp.ac.uryukyu.ie.e195752;
-import com.sun.jdi.PathSearchingVirtualMachine;
-
 import java.util.ArrayList;
 public class Search {
     ArrayList<String> Data = new ArrayList<String>(){
@@ -25,5 +23,30 @@ public class Search {
             }
         }
         System.out.println("]");
+    }
+     public ArrayList<String> Searching(ArrayList List, ArrayList result){
+        int der = result.size();
+        if (result.size()==0){
+            result = List;
+        }else{
+            for (int i =0; i<List.size(); i++){
+                if (result.contains(List.get(i))){
+                    result.add(List.get(i));
+                }
+                else {
+                }
+            }
+            for (int a=0; a<der; a++){
+                result.remove(result.indexOf(result.get(0)));
+            }
+        }
+        if (result.size() == 0){
+            System.out.println("一致するクエストがありません。リセットします。");
+            result.clear();
+        }
+         for (int i= 0; i<result.size(); i++){
+             System.out.println(result.get(i));
+         }
+        return result;
     }
 }
