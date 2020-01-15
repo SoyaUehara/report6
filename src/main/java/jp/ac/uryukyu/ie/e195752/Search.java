@@ -1,7 +1,7 @@
 package jp.ac.uryukyu.ie.e195752;
 import java.util.ArrayList;
 public class Search {
-    ArrayList<String> Data = new ArrayList<String>(){
+    private ArrayList<String> Data = new ArrayList<>(){
         {
             add("ギミック名");
             add("Damage_wall");
@@ -40,13 +40,9 @@ public class Search {
                 result.remove(result.indexOf(result.get(0)));
             }
         }
-        if (result.size() == 0){
-            System.out.println("一致するクエストがありません。リセットします。");
-            result.clear();
+        for (int i= 0; i<result.size(); i++){
+            System.out.println(result.get(i));
         }
-         for (int i= 0; i<result.size(); i++){
-             System.out.println(result.get(i));
-         }
         return result;
     }
 }

@@ -13,32 +13,30 @@ public class Main {
         Read Wp = new Read("Warp");
         Read Wind = new Read("wind");
         Scanner scan = new Scanner(System.in);
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         while (true){
             Search search = new Search();
             System.out.println("ギミックを入力してください");
             String input = scan.nextLine();
             if (input.equals("Damage_wall")){
-                result = search.Searching(DW.List, result);
+                result = search.Searching(DW.getList(), result);
             }else if (input.equals("Block")){
-                result = search.Searching(Block.List,result);
+                result = search.Searching(Block.getList(),result);
             }else if (input.equals("Deceleration_Wall")){
-                result = search.Searching(Deceleration.List,result);
+                result = search.Searching(Deceleration.getList(),result);
             }else if (input.equals("Gravity_Barrier")){
-                result = search.Searching(GB.List,result);
+                result = search.Searching(GB.getList(),result);
             }else if (input.equals("Magic_Circle")){
-                result = search.Searching(Magic.List,result);
+                result = search.Searching(Magic.getList(),result);
             }else if (input.equals("Mines")){
-                result = search.Searching(Mines.List,result);
+                result = search.Searching(Mines.getList(),result);
             }else if (input.equals("Warp")){
-                result = search.Searching(Wp.List,result);
+                result = search.Searching(Wp.getList(),result);
             }else if (input.equals("wind")){
-                result = search.Searching(Wind.List,result);
+                result = search.Searching(Wind.getList(),result);
             }else if (input.equals("end.")){
                 System.out.println("終了します");
                 break;
-            }else if (input.equals("リセット")){
-                result.clear();
             } else {
                 System.out.println("もう一度、入力して下さい");
             }

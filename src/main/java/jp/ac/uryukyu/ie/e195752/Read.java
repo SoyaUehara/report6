@@ -4,7 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Read {
-    ArrayList<String> List = new ArrayList<String>();
+    private ArrayList<String> List = new ArrayList<>();
+    public ArrayList getList(){
+        return this.List;
+    }
     public Read(String gimmick){
         try {
             File file = new File("/Users/e195752/IdeaProjects/report6/"+gimmick+".txt");
