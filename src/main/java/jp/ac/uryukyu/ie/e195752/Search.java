@@ -28,7 +28,7 @@ public class Search {
         for (int i=0; i<Gimmick_Data.size(); i++){
             System.out.print(Gimmick_Data.get(i));
             if (i<Gimmick_Data.size()-1){
-                System.out.print(":");
+                System.out.print("　");
             }
         }
         System.out.println("]");
@@ -43,7 +43,7 @@ public class Search {
     public ArrayList<String> Searching(ArrayList List, ArrayList result){
         int der = result.size();
         if (result.size()==0){
-            result = List;
+            result = new ArrayList(List);
         }else{
             for (int i =0; i<List.size(); i++){
                 if (result.contains(List.get(i))){
@@ -58,6 +58,11 @@ public class Search {
         }
         for (int i= 0; i<result.size(); i++){
             System.out.println(result.get(i));
+        }
+        if (result.size()==0){
+            System.out.println("クエストがありません");
+            System.out.println("リセットします");
+            result.clear();
         }
         return result;
     }

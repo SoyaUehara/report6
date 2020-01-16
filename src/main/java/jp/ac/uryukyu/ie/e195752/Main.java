@@ -40,6 +40,9 @@ public class Main {
             }else if (input.equals("end.")){
                 System.out.println("終了します");
                 break;
+            }else if (input.equals("リセット")){
+                System.out.println("リセットします。");
+                result.clear();
             } else {
                 System.out.println("もう一度、入力して下さい");
             }
