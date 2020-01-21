@@ -41,7 +41,7 @@ public class Search {
      * @return 検索結果を返す
      */
     public ArrayList<String> Searching(ArrayList List, ArrayList result){
-        int der = result.size();
+        int delete = result.size();
         if (result.size()==0){
             result = new ArrayList(List);
         }else{
@@ -52,7 +52,7 @@ public class Search {
                 else {
                 }
             }
-            for (int a=0; a<der; a++){
+            for (int a=0; a<delete; a++){
                 result.remove(result.indexOf(result.get(0)));
             }
         }
