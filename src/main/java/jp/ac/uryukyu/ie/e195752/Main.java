@@ -20,6 +20,7 @@ public class Main {
         while (true){
             Search search = new Search();
             System.out.println("上のギミック一覧の中から入力してください");
+            System.out.println("＝＞");
             String input = scan.nextLine();
             if (input.equals("Damage_wall")){
                 result = search.Searching(DW.getList(), result);
