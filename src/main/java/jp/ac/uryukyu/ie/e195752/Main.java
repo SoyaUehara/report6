@@ -22,30 +22,44 @@ public class Main {
             System.out.println("上のギミック一覧の中から入力してください");
             System.out.println("＝＞");
             String input = scan.nextLine();
-            if (input.equals("Damage_wall")){
-                result = search.Searching(DW.getList(), result);
-            }else if (input.equals("Block")){
-                result = search.Searching(Block.getList(),result);
-            }else if (input.equals("Deceleration_Wall")){
-                result = search.Searching(Deceleration.getList(),result);
-            }else if (input.equals("Gravity_Barrier")){
-                result = search.Searching(GB.getList(),result);
-            }else if (input.equals("Magic_Circle")){
-                result = search.Searching(Magic.getList(),result);
-            }else if (input.equals("Mines")){
-                result = search.Searching(Mines.getList(),result);
-            }else if (input.equals("Warp")){
-                result = search.Searching(Wp.getList(),result);
-            }else if (input.equals("wind")){
-                result = search.Searching(Wind.getList(),result);
-            }else if (input.equals("end.")){
+            switch (input){
+                case "Damage_wall":
+                    result = search.Searching(DW.getList(), result);
+                    break;
+                case "Block":
+                    result = search.Searching(Block.getList(),result);
+                    break;
+                case "Deceleration_Wall":
+                    result = search.Searching(Deceleration.getList(),result);
+                    break;
+                case "Gravity_Barrier":
+                    result = search.Searching(GB.getList(),result);
+                    break;
+                case "Magic_Circle":
+                    result = search.Searching(Magic.getList(),result);
+                    break;
+                case "Mines":
+                    result = search.Searching(Mines.getList(),result);
+                    break;
+                case "Warp":
+                    result = search.Searching(Wp.getList(),result);
+                    break;
+                case "wind":
+                    result = search.Searching(Wind.getList(),result);
+                    break;
+                case "リセット":
+                    System.out.println("リセットします。");
+                    result.clear();
+                    break;
+                case "end.":
+                    break;
+                default:
+                    System.out.println("もう一度、入力してください");
+                    break;
+            }
+            if (input.equals("end.")){
                 System.out.println("終了します");
                 break;
-            }else if (input.equals("リセット")){
-                System.out.println("リセットします。");
-                result.clear();
-            } else {
-                System.out.println("もう一度、入力して下さい");
             }
         }
     }
