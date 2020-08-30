@@ -9,13 +9,13 @@ import java.util.ArrayList;
  * List; //クエストの一覧
  */
 public class Read {
-    private ArrayList<String> List = new ArrayList<>();
+    final private ArrayList<String> List = new ArrayList<>();
 
     /**
-     * Listのゲッターメソッド
-     * @return　対応したListを返す
+     *
+     * @return Listを返す
      */
-    public ArrayList getList(){
+    public ArrayList<String> getList(){
         return this.List;
     }
 
