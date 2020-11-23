@@ -53,9 +53,6 @@ public class Search {
                 result.remove(result.indexOf(result.get(0)));
             }
         }
-        for (String quest : result){
-            System.out.println(quest);
-        }
         if (result.size()==0){
             System.out.println("クエストがありません");
             System.out.println("リセットします");

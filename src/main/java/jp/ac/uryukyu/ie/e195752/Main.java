@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * Created by soya on 2020/1/15.
+ * Created by so-ya on 2020/1/15.
  */
 public class Main {
     public static void main(String[] args){
@@ -25,27 +25,51 @@ public class Main {
             switch (input){
                 case "Damage_wall":
                     result = search.Searching(DW.getList(), result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Block":
                     result = search.Searching(Block.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Deceleration_Wall":
                     result = search.Searching(Deceleration.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Gravity_Barrier":
                     result = search.Searching(GB.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Magic_Circle":
                     result = search.Searching(Magic.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Mines":
                     result = search.Searching(Mines.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "Warp":
                     result = search.Searching(Wp.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "wind":
                     result = search.Searching(Wind.getList(),result);
+                    for (String quest : result){
+                        System.out.println(quest);
+                    }
                     break;
                 case "リセット":
                     System.out.println("リセットします。");

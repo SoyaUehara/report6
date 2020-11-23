@@ -20,9 +20,10 @@ class SearchTest {
         for (int j=2; j<5; j++){
             test_list2.add(String.valueOf(j));
         }
-        System.out.println("テスト・パート１");
         result = search.Searching(test_list1,result);
-        System.out.println("テスト・パート２");
+        assertEquals(result.size(),10);
+
         result = search.Searching(test_list2, result);
+        assertEquals(result.size(),3);
     }
 }
